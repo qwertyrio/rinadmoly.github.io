@@ -64,7 +64,7 @@ img {
 	margin-bottom: 75px;
 	font-size: 30px;
 }
-.col-4 {
+.col {
 	width: 33.3333%;
 	padding: 0 15px;
 }
@@ -262,8 +262,10 @@ input+input{
     background-attachment: fixed;
 }
 .footer{
+    margin-top: 12%;
+    padding-left: 5%;
     width: 100%;
-    background-color: #4d4444;
+    background-color: #756969;
     height: 150px;
     color: white;
     font-size: 10px;
@@ -271,7 +273,7 @@ input+input{
 .network{
     width: 30%;
 }
-img+img{
+a+a{
     margin-left: 30px;
 }
 .contact-item>h1{
@@ -279,4 +281,25 @@ img+img{
 }
 .contact-item+.contact-item{
     margin-top: 5px;
+}
+.autor{
+    background-color: #212121;
+    color: white;
+    padding: 1.1%;
+}
+
+@media screen and (max-device-width:360px){   .container{
+    width: 100%;
+}
+    .col{
+        width: 60%;
+        margin: auto;
+        height: 300px;
+        margin-bottom: 15%;
+    }
+    .news{
+        width: 80%;
+    }
+
+    .ad-img{width: 100%;}
 }
