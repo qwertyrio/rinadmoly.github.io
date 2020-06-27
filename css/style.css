@@ -73,6 +73,10 @@ img {
 	width: 33.3333%;
     padding: 0 15px;
 }
+.column {
+	width: 33.3333%;
+    padding: 0 15px;
+}
 .row {
 	margin: 0 -15px;
 }
@@ -305,6 +309,9 @@ a+a{
     #menu__toggle {
     opacity: 0;
     }
+    .hamburger-menu{
+        display: block;
+    }
     
     #menu__toggle:checked ~ .menu__btn > span {
     transform: rotate(45deg);
@@ -321,10 +328,7 @@ a+a{
     background-color: #000;
     
     }
-
-    .col{
-        padding-bottom: 40%;
-    }
+    
     #menu__toggle:checked ~ .menu__box {
     visibility: visible;
     right: 0;
@@ -334,12 +338,12 @@ a+a{
     display: flex;
     align-items: center;
     position: absolute;
-    top: 40px;
-    right: 80px;
+    top: 110px;
+    right: 95px;
     
     
-    width: 26px;
-    height: 26px;
+    width: 35px;
+    height: 30px;
     
     cursor: pointer;
     z-index: 1;
@@ -352,7 +356,7 @@ a+a{
     position: absolute;
     
     width: 100%;
-    height: 2px;
+    height: 3.5px;
     
     background-color: white;
     
@@ -404,16 +408,43 @@ a+a{
     #header{
     width: 100%;
     margin: auto;
-}
+    height: 250px;
+    }
+    .logo{
+        width: 150px;
+        height: 120px;
+    }
     .container{
         width: 100%;
     }
     .col{
-        width: 60%;
+        width: 80%;
         margin: auto;
-        height: 300px;
+        height: 550px;
+    }
+    .col:first-child{
         margin-bottom: 15%;
     }
+
+    .col+.col{
+        margin-bottom: 10%;
+    }
+    .col:last-child{
+        margin-top: -10%;
+    }
+    .column{
+        width: 80%;
+        margin: auto;
+        height: 550px;
+    }
+    .column:first-child{
+        margin-bottom: 5%;
+    }
+
+    .column+.column{
+        margin-bottom: 10%;
+    }
+    
     .col-4{
         width: 33.3333%;
     padding: 0 15px;
@@ -430,8 +461,13 @@ a+a{
         font-size: 14px;
     }
     .univer-img{
-        width: 80%;
-        margin-left: 10%;
+        width: 90%;
+        height: 0%; 
+    }
+    .univer-img2{
+        width: 90%;
+        height: 0%;
+        margin-left: 5%;
     }
     .backround-img{
         background-attachment: local;
@@ -452,8 +488,8 @@ a+a{
     .header-nav{
         display: none;
     }
-    .hamburger-menu{
-        display: block;
+    .btn {
+        font: 400 24px/1 'Roboto', sans-serif;
     }
    
 }
