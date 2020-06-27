@@ -19,7 +19,10 @@ img {
 }
 /* Reset end */
 /* Default classes start */
-.logo{
+
+.hamburger-menu{
+    display: none;
+}.logo{
     width: 85px;
     height: 70px;
 }.d-flex {
@@ -30,6 +33,9 @@ img {
 }
 .justify-content-center {
 	justify-content: center;
+}
+.justify-content-around{
+    justify-content: space-around;
 }
 .flex-column {
 	flex-direction: column;
@@ -51,7 +57,6 @@ img {
 }
 /* Default classes end */
 .container {
-    max-width: 1200px;
     width: 100%;
 	margin: auto;
 	padding: 0 15px;
@@ -66,7 +71,7 @@ img {
 }
 .col {
 	width: 33.3333%;
-	padding: 0 15px;
+    padding: 0 15px;
 }
 .row {
 	margin: 0 -15px;
@@ -85,13 +90,10 @@ img {
 	background-color: #fff;
 }
 #header {
-	padding: 20px 0;
+	padding: 20px;
 	border-bottom: 2px solid #00e9ba;
 	background-color: #0C42A5;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    z-index: 5;
-    width: 1200px;
-
 }
 .header-nav {
 	font-size: 16px;
@@ -237,9 +239,18 @@ input+input{
     padding-bottom: 5px;
 }
 .news-text{
-    margin-left: 5px;
-    
+    margin-left: 5px;  
 }
+.col-4{
+    width: 33.3333%;
+    padding: 0 15px;
+}
+.profile-item  {
+	background-color: #fff;
+    box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    padding: 10px;
+	}
 .name{
     font-weight: bold;
     font-size: 16px;
@@ -285,8 +296,111 @@ a+a{
     background-color: #212121;
     color: white;
     padding: 1.1%;
+    width: 100%;
 }
-@media screen and (max-device-width:360px){   
+@media screen and (max-device-width:360px){ 
+    p{
+        font-size: 24px;
+    }  
+    #menu__toggle {
+    opacity: 0;
+    }
+    
+    #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+    background-color: #000;
+    }
+    #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: #000;
+    }
+    #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: #000;
+    
+    }
+
+    .col{
+        padding-bottom: 40%;
+    }
+    #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+    }
+    
+    .menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    
+    
+    width: 26px;
+    height: 26px;
+    
+    cursor: pointer;
+    z-index: 1;
+    }
+    
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    
+    width: 100%;
+    height: 2px;
+    
+    background-color: white;
+    
+    transition-duration: .25s;
+    }
+    .menu__btn > span::before {
+    content: '';
+    top: -8px;
+    }
+    .menu__btn > span::after {
+    content: '';
+    top: 8px;
+    }
+    
+    .menu__box {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+    right: 1%;
+    
+    width: 300px;
+    height: 30%;
+    
+    margin: 0;
+    padding: 80px 0;
+    
+    list-style: none;
+    
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    
+    transition-duration: .25s;
+    }
+    
+    .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+    }
+    .menu__item:hover {
+    background-color: #CFD8DC;
+    }
     #header{
     width: 100%;
     margin: auto;
@@ -300,9 +414,46 @@ a+a{
         height: 300px;
         margin-bottom: 15%;
     }
-    .news{
-        width: 80%;
+    .col-4{
+        width: 33.3333%;
+    padding: 0 15px;
+    margin-bottom: 10%;
     }
-
-    .ad-img{width: 100%;}
+    .profile-item{
+        margin-bottom: 3%;
+    }
+    .news-img{
+        display: none;
+    }
+    .news-title{
+        margin: auto;
+        font-size: 14px;
+    }
+    .univer-img{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .backround-img{
+        background-attachment: local;
+    }
+    .ad-img{width: 100%;
+        background-attachment: local;
+    }
+    .ad2-img{
+        background-attachment: local;
+    }
+    .news-post p{
+        font-size: 10px;
+    }
+    .news-more{
+        font-size: 12px;
+        color:red
+    }
+    .header-nav{
+        display: none;
+    }
+    .hamburger-menu{
+        display: block;
+    }
+   
 }
