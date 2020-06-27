@@ -89,8 +89,6 @@ img {
 	border-bottom: 2px solid #00e9ba;
 	background-color: #0C42A5;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    margin-left: 3%;
     z-index: 5;
     width: 1200px;
 
@@ -288,14 +286,13 @@ a+a{
     color: white;
     padding: 1.1%;
 }
-
 @media screen and (max-device-width:360px){   
     #header{
-    width: 360px;
+    width: 100%;
     margin: auto;
 }
     .container{
-        width: 360px;
+        width: 100%;
     }
     .col{
         width: 60%;
